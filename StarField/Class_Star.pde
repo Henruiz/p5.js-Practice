@@ -1,11 +1,14 @@
+//creating class for Star
 class Star {
-  
+
+ //Local variables for the position of the star 
  float x;
  float y;
  float z;
  
-float pz; 
+ float pz; 
 
+  //When creating the star objects it will be within the window. 
   Star() {
      x = random(-width, width);
      y = random(-height, height);
@@ -13,6 +16,7 @@ float pz;
      pz = z;
   }
   
+  //Updates the speed of the stars when hovering your mouse over. 
   void update(){
     z = z - speed; 
     if ( z < 1){
@@ -23,6 +27,7 @@ float pz;
     }
   }
   
+  //Displaying the stars in the window random and based on their position. 
   void show(){
    fill(255); 
    noStroke(); 
@@ -39,11 +44,6 @@ float pz;
    pz = z; 
    
    stroke(255); 
-   line(px, py, sx, sy);  
- 
-   
-
-   
-  }
-  
+   line(px, py, sx, sy);    
+  }  
 }
